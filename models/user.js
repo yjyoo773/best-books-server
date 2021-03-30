@@ -13,16 +13,19 @@ db.once("open", function () {
   console.log("connected to the database!");
 });
 
-const userSchema = new mongoose.Schema({
-  email: { type: String, required: true },
-  books: [],
-});
 const booksSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String },
   status: { type: String },
 });
+const Books = mongoose.model("books", booksSchema);
+
+const userSchema = new mongoose.Schema({
+  email: { type: String, required: true },
+  // books: [{name: String,description:String,status:String}],
+  books:[booksSchema],
+});
+
 
 const User = mongoose.model("user", userSchema);
-const Books = mongoose.model("books", booksSchema);
 module.exports = User;
