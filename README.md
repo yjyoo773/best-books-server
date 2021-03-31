@@ -23,6 +23,8 @@ express, cors, dotenv, mongoose, nodemon
 
 Lena instructor. MongoDB docs
 
+![back-end-image](best-books-back-end.png)
+
 Name of feature: created back end with routes to books
 
 Estimate of time needed to complete: 4 hours
