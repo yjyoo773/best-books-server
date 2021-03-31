@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 
 const User = require("./models/user");
 const userHandler = require("./models/userHandler");
+const createBook = require("./models/createBook");
 
 const elijah = new User({
   email: "elijahprom@gmail.com",
@@ -38,20 +39,6 @@ const ellis = new User({
   ],
 });
 ellis.save();
-
-function createBook(req, res) {
-  // console.log("%c from createBook, ", req.body, "color: red");
-  const email = req.body.email;
-  const book = {name:req.body.bookName,description:req.body.description,status:req.body.status}
-  console.log(book)
-  User.findOne({email},(err,entry)=>{
-    if (err) return console.error(err);
-    entry.books.push(book);
-    entry.save();
-    console.log("after user",entry.books)
-    res.status(200).send(entry.books)
-  })
-}
 
 app.get("/books", userHandler);
 app.post("/books", createBook);
