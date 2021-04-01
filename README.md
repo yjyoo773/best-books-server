@@ -19,13 +19,14 @@ express, cors, dotenv, mongoose, nodemon
 
 03-30-21 2:18pm - Application now has a fully-functional express server, with a GET route for the location resource.
 
+03-31-21 6:30 - Application can now add and delete books
 ## Credit and Collaborations
 
 Lena instructor. MongoDB docs
 
 ![back-end-image](best-books-back-end.png)
 
-Name of feature: created back end with routes to books
+### Name of feature: created back end with routes to books
 
 Estimate of time needed to complete: 4 hours
 
@@ -34,3 +35,22 @@ Start time: 1:30pm
 Finish time: 2:20pm
 
 Actual time needed to complete: 50 minutes
+
+
+### Name of feature: Allow to create books
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1:00pm
+
+Finish time: 1:30 pm
+Actual time needed to complete: 30 min
+
+### Name of feature: Allow to delete books
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:00pm
+
+Finish time: 6:30 pm
+Actual time needed to complete: 2.5hrs
