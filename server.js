@@ -11,6 +11,7 @@ const PORT = process.env.PORT;
 const User = require("./models/user");
 const userHandler = require("./models/userHandler");
 const createBook = require("./models/createBook");
+const deleteBook = require("./models/deleteBook");
 
 const elijah = new User({
   email: "elijahprom@gmail.com",
@@ -42,7 +43,7 @@ ellis.save();
 
 app.get("/books", userHandler);
 app.post("/books", createBook);
-// app.delete("/books",deleteBook);
+app.delete("/books/:index",deleteBook);
 // console.log("elijahs books", elijah);
 
 //MiddleWares
