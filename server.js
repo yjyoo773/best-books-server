@@ -46,7 +46,7 @@ app.get("/books", userHandler);
 app.post("/books", createBook);
 app.delete("/books/:index", deleteBook);
 // console.log("elijahs books", elijah);
-app.put("./books/:index", updateBook);
+app.put("/books/:index", updateBook);
 
 //MiddleWares
 // app.use("/middleware", () => {
