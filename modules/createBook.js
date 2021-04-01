@@ -1,5 +1,5 @@
 "use strict";
-const User = require("./user");
+const User = require("../models/user");
 
 async function createBook(req, res) {
   // console.log("%cfrom createBook, ", req.body, "color: red");
