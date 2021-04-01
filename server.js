@@ -9,9 +9,10 @@ app.use(express.json()); // middleware
 const PORT = process.env.PORT;
 
 const User = require("./models/user");
-const userHandler = require("./models/userHandler");
-const createBook = require("./models/createBook");
-const deleteBook = require("./models/deleteBook");
+const userHandler = require("./modules/userHandler");
+const createBook = require("./modules/createBook");
+const deleteBook = require("./modules/deleteBook");
+const updateBook = require("./modules/updateBook");
 
 const elijah = new User({
   email: "elijahprom@gmail.com",
@@ -43,8 +44,9 @@ ellis.save();
 
 app.get("/books", userHandler);
 app.post("/books", createBook);
-app.delete("/books/:index",deleteBook);
+app.delete("/books/:index", deleteBook);
 // console.log("elijahs books", elijah);
+app.put("./books/:index", updateBook);
 
 //MiddleWares
 // app.use("/middleware", () => {
