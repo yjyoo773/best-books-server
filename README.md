@@ -20,6 +20,9 @@ express, cors, dotenv, mongoose, nodemon
 03-30-21 2:18pm - Application now has a fully-functional express server, with a GET route for the location resource.
 
 03-31-21 6:30 - Application can now add and delete books
+
+04-01-21 4:45 = Application can now update books
+
 ## Credit and Collaborations
 
 Lena instructor. MongoDB docs
@@ -54,3 +57,12 @@ Start time: 4:00pm
 
 Finish time: 6:30 pm
 Actual time needed to complete: 2.5hrs
+
+### Name of feature: Allow to update books
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 1:15pm
+
+Finish time: 4:45 pm
+Actual time needed to complete: 3.5hrs
