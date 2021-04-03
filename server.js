@@ -9,10 +9,11 @@ app.use(express.json()); // middleware
 const PORT = process.env.PORT;
 
 const User = require("./models/user");
-const userHandler = require("./modules/userHandler");
-const createBook = require("./modules/createBook");
-const deleteBook = require("./modules/deleteBook");
-const updateBook = require("./modules/updateBook");
+const Books = require("./modules/books")
+// const userHandler = require("./modules/userHandler");
+// const createBook = require("./modules/createBook");
+// const deleteBook = require("./modules/deleteBook");
+// const updateBook = require("./modules/updateBook");
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/test", {
@@ -24,10 +25,10 @@ mongoose.connect("mongodb://localhost:27017/test", {
 app.get("/", (req, res) => {
   res.send("proof of life");
 });
-app.get("/books", userHandler);
-app.post("/books", createBook);
-app.delete("/books/:index", deleteBook);
-app.put("/books/:index", updateBook);
+app.get("/books", Books.getBook);
+app.post("/books", Books.createBook);
+app.delete("/books/:index", Books.deleteBook);
+app.put("/books/:index", Books.updateBook);
 
 
 
